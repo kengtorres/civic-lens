@@ -87,26 +87,77 @@ body.dark-mode {
 
 /* ///ADD/// Skip Link Styles */
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ///ADD/// Navigation Styles */
+
+.mobile-nav .menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (min-width: 920px) {
+  .mobile-nav .menu {
+    flex-direction: row;
+  }
+}
 
 /* ///ADD/// Global Layout Styles */
 
+main {
+  width: 90%;
+  margin: auto;
+}
+
 /* ///ADD/// Global Text Styles */
 
+body {
+  font-family: var(--font-body);
+}
 
 /* ///ADD/// medium styles 620px */
 
+@media (min-width: 620px) {
+  main { width: 85%; }
+}
 
 /* ///ADD/// large styles 920px */
 
+@media (min-width: 920px) {
+  main { width: 75%; }
+}
 
 /* ///ADD/// x-large styles 1024px */
 
+@media (min-width: 1024px) {
+  main { width: 65%; }
+}
 
 /* ///ADD/// Interaction Queries for color scheme light and dark and motion preference */
 
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none; transition: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: var(--truth-text); color: var(--watchdog-white); }
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: var(--watchdog-white); color: var(--truth-text); }
+}
 
 /* ///ADD///  Feature Query for :has() that checks if the #menu-toggle is checked */
 @supports (selector(:has(*))) {
-
+  .mobile-nav:has(#menu-toggle:checked) .menu {
+    display: block;
+  }
 }
