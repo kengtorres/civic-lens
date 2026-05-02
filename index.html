@@ -108,34 +108,49 @@
         
         </section>
         
-      Stay Informed. Stay Empowered.
-        Receive text messages with the news you want to know.
+      <h2>Stay Informed. Stay Empowered.</h2>
+        <p>Receive text messages with the news you want to know.</p>
         
-        Name
-        
-        Mobile
-        
-        Notification Preferences
-        
-        Breaking News
-        Politics
-        Weather
-        Sports
-        Entertainment
-        World
-        Financial
-        
-        Subscribe
-      
-      Follow Us
-        Twitter/X
-        Instagram
-        YouTube
-        TikTok
-        LinkedIn
-        
-        &copy; 2025 Civic Lens. All rights reserved.
-        
+       <section id="alerts">
+    <h2>Stay Informed. Stay Empowered.</h2>
+
+    <form action="https://wp.zybooks.com/form-viewer.php" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="mobile">Mobile</label>
+      <input type="tel" id="mobile" name="mobile">
+
+      <fieldset>
+        <legend>Notification Preferences</legend>
+
+        <label><input type="checkbox" name="prefs" value="breaking"> Breaking News</label>
+        <label><input type="checkbox" name="prefs" value="politics"> Politics</label>
+        <label><input type="checkbox" name="prefs" value="weather"> Weather</label>
+        <label><input type="checkbox" name="prefs" value="sports"> Sports</label>
+        <label><input type="checkbox" name="prefs" value="entertainment"> Entertainment</label>
+        <label><input type="checkbox" name="prefs" value="world"> World</label>
+        <label><input type="checkbox" name="prefs" value="financial"> Financial</label>
+      </fieldset>
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <section id="social">
+    <h2>Follow Us</h2>
+    <ul>
+    <li>Twitter/X</li>
+    <li>Instagram</li>
+    <li>YouTube</li>
+    <li>TikTok</li>
+    <li>LinkedIn</li>
+    </ul>
+    <p>2025 Civic Lens. All rights reserved.</p>
+  </section>
+
+</main>
+
         
   <script>
     const toggleButton = document.getElementById('theme-toggle');
